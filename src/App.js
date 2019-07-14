@@ -60,7 +60,15 @@ function App() {
           </button>
         </div>
         <div>
-          <button onClick={() => setQuarter(quarter + 1)}>Quarter</button>
+          <button
+            onClick={() => {
+              if (quarter < 4) {
+                setQuarter(quarter + 1);
+              }
+            }}
+          >
+            Quarter
+          </button>
         </div>
       </section>
     </div>
