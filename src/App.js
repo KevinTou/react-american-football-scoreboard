@@ -8,6 +8,7 @@ function App() {
 
   const [lionsScore, setLionsScore] = useState(0);
   const [tigersScore, setTigersScore] = useState(0);
+  const [quarter, setQuarter] = useState(1);
 
   return (
     <div className="container">
@@ -26,7 +27,7 @@ function App() {
             <div className="away__score">{tigersScore}</div>
           </div>
         </div>
-        <BottomRow />
+        <BottomRow quarter={quarter} />
       </section>
       <section className="buttons">
         <div className="homeButtons">
@@ -57,6 +58,9 @@ function App() {
           >
             Away Field Goal
           </button>
+        </div>
+        <div>
+          <button onClick={() => setQuarter(quarter + 1)}>Quarter</button>
         </div>
       </section>
     </div>
